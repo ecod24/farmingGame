@@ -1,35 +1,44 @@
-import React from 'react';
+import React, { useState } from "react";
 
+import "./FieldTile.css";
 
-import './FieldTile.css';
+const FieldTile = ({ tile }) => {
+	const [planted, setPlanted] = useState(false);
+	// get color for tile
+	const getColorForTile = (tile) => {
+		let color;
 
-const FieldTile = ({tile}) => {
+		switch (tile) {
+			case "W":
+				color = "blue";
+				break;
+			case "L":
+				color = "bisque";
+				break;
+			case "F":
+				color = "green";
+				break;
+			default:
+				color = "brown";
+		}
 
-// get color for tile
-const getColorForTile = (tile) => {
+		return color;
+	};
 
-    let color;
+	return (
+		<div
+			className="fieldTile"
+			style={{ backgroundColor: planted ? "yellow" : getColorForTile(tile) }}
+			onClick={() => {
+				if (tile === "L") {
+					setPlanted(true);
+				}
+			}}
+		>
+			{" "}
+			{tile}{" "}
+		</div>
+	);
+};
 
-    switch (tile){
-      case 'W':
-        color = "blue";
-        break;
-      case 'L': 
-        color = "bisque";
-        break;
-      case 'F':
-        color = "green";
-        break;
-      default:
-        color = "brown";
-    }
-
-    return color;
-  }
-
-  return (
-    <div className="fieldTile" style={{"backgroundColor": getColorForTile(tile)}}> {tile} </div>
-  )
-}
-
-export default FieldTile
+export default FieldTile;

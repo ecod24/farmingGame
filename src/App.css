@@ -1,8 +1,12 @@
 .field {
-  margin: 40px auto;
-  width: 800px;
+	margin: 40px auto;
+	width: 800px;
 }
 
 .field__row {
-  display: flex;
+	display: flex;
+}
+.App {
+	display: grid;
+	grid-template-columns: 4fr 1fr;
 }
