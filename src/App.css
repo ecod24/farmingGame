@@ -1,5 +1,12 @@
-.field {
+
+.App {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
   margin: 40px auto;
+  width: 1200px;
+}
+
+.field { 
   width: 800px;
 }
 

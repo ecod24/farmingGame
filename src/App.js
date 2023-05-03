@@ -3,6 +3,7 @@ import Field from './Field';
 
 // Components
 import FieldTile from './components/fieldTile/FieldTile';
+import FieldKey from './components/fieldKey/FieldKey';
 
 // Styling
 import './App.css';
@@ -22,6 +23,7 @@ function App() {
           </div>)
         })}
       </div>
+      <FieldKey />
     </div>
   );
 }
