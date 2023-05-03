@@ -1,0 +1,8 @@
+
+.fieldKey {
+    width: 200px;
+}
+.fieldKey__entry {
+    display: flex;
+    justify-content: space-between;
+}
