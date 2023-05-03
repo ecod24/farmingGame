@@ -3,10 +3,16 @@ import React from 'react';
 
 import './FieldTile.css';
 
-const FieldTile = ({tile}) => {
+type FieldTileTypes = {
+  tile: string
+}
+
+const FieldTile = ({tile}: FieldTileTypes) => {
+
+  console.log(typeof tile)
 
 // get color for tile
-const getColorForTile = (tile) => {
+const getColorForTile = (tile: string) => {
 
     let color;
 
