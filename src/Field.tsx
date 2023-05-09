@@ -6,6 +6,7 @@
 
 
 export default class Field {
+    tiles: string[][];
 
     constructor() {
         this.tiles = [];
@@ -22,7 +23,7 @@ export default class Field {
         }
     }
 
-    createRow (hasHouse) {
+    createRow (hasHouse: boolean) {
         let houseIndex;
         
         // if has house 
